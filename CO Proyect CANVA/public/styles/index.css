@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 0px) and (max-width: 735px) {
+    .main {
+        display: flex;
+        padding: 10%;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    #grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+    #grid div:not(#imgBox) {
+        display: flex;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        transition: 0.2s;
+        justify-content: center;
+    }
+    
+    
+    #grid div:not(#imgBox, #nameT):hover {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        background-color: black;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    
+    }
+    
+    #information2 {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        background-color: black;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    
+    }
+    
+    .pinfo {
+        display: none; 
+    }
+    .pExp{
+        display: none;
+    }
+    .pSkills {
+        display: none;
+    }
+    .pAboutMe {
+        display: none;
+    }
+    .material-symbols-outlined.closeI {
+        display: none;
+        width: 100%;
+    }
+    
+    
+    #nMode {
+        position: fixed;
+        display: flex;
+        top: 0px;
+        right: 65px;
+        border: none;
+        
+    }
+    #nMode span {
+        background-color: black;
+    
+    }
+    #sun {
+        display: block;
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    
+    }
+    #moon {
+        display: none;
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+    
+    #on {
+        display: none;
+        color: white;
+        font-size: 40px;
+        transition: all 0.2s;
+    }
+    
+    #off{
+        display: block;
+        color: white;
+        font-size: 40px;
+        transition: all 0.2s;
+    
+    }
+    
+    #pdf {
+        width: 100vw;
+        top: 0%;
+        left: 0px;
+        position: fixed;
+        height: 40px;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px;
+    }
+    #imgBox {
+        grid-row-end: span 2; /* Este elemento se extiende a través de dos filas */
+        grid-column-end: span 1; /* Este elemento se extiende a través de dos columnas */
+        display: flex;    }
+    
+    #imgBox img{
+        width: 200px;
+        height: auto;
+        margin: auto;
+        border: solid 4px black;
+        border-radius: 50%;
+                }
+    
+    #box {
+        position: absolute;
+        display: none;
+        background-color: white;
+        width: 81%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        padding: 10%;
+        margin: 9%;
+        margin-top: 8%;
+        height: 70%;
+        border: solid black;
+        z-index: 2;
+        top: 0px;
+        bottom: 0px;
+    }
+
+
+    
+    /* Dark mode */
+    
+    .mainD {
+        display: flex;
+        height: 100vh;
+        margin-left: 0px;
+        width: 100vw;
+        padding: 10%;
+        background-color:rgb(23, 23, 23)
+    }
+    #boxD {
+        position: absolute;
+        color: white;
+        display: none;
+        width: 81%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        padding: 10%;
+        margin: 9%;
+        margin-top: 8%;
+        height: 70%;
+        border: solid white;
+        z-index: 2;
+        top: 0px;
+        bottom: 0px;
+    }
+    #pdfD {
+        width: 100vw;
+        left: 0px;
+        top: 0%;
+        position: fixed;
+        height: 40px;
+        background-color: white;
+        color: black;
+        margin: 0px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 800;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #gridD {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+    #gridD div:not(#imgBox) {
+        display: flex;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid white;
+        transition: 0.2s;
+        color: white;
+        justify-content: center;
+    }
+    
+    #gridD div:not(#imgBox, #nameT):hover {
+        display: flex;
+        color: black;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    
+    
+    #nModeD {
+        position: fixed;
+        display: flex;
+        top: 0px;
+        right: 65px;
+        border: none;
+        
+    }
+    #nModeD span {
+        background-color: white;
+    
+    }
+    #sunD {
+        display: none;
+        color: black;
+        font-size: 30px;
+        font-weight: 400;
+        padding: 5px;
+    
+    }
+    #moonD {
+        display: block;
+        color: black;
+        font-size: 30px;
+        font-weight: 400;
+        padding: 5px;
+    }
+    
+    #onD {
+        display: block;
+        color: black;
+        font-size: 40px;
+    }
+    
+    #offD{
+        display: none;
+        color: white;
+        font-size: 40px;  
+    }
+} /* ////////////////////////////*/
+@media only screen and (min-width: 735px)  {
+    .main {
+        display: flex;
+        padding: 10%;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    #grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+    #grid div:not(#imgBox) {
+        display: flex;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        transition: 0.2s;
+        justify-content: center;
+    }
+    
+    
+    #grid div:not(#imgBox, #nameT):hover {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        background-color: black;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    
+    }
+    
+    #information2 {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        background-color: black;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    
+    }
+    
+    .pinfo {
+        display: none; 
+    }
+    .pExp{
+        display: none;
+    }
+    .pSkills {
+        display: none;
+    }
+    .pAboutMe {
+        display: none;
+    }
+        .material-symbols-outlined.closeI {
+        display: none;
+    }
+    .pContact1{
+        width: 100%;   
+    }
+    .pContact2{
+        width: 100%;   
+    }
+    
+    #nMode {
+        position: fixed;
+        display: flex;
+        top: 0px;
+        right: 65px;
+        border: none;
+        
+    }
+    #nMode span {
+        background-color: black;
+    
+    }
+    #sun {
+        display: block;
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    
+    }
+    #moon {
+        display: none;
+        color: white;
+        font-size: 30px;
+        padding: 5px;
+    }
+    
+    #on {
+        display: none;
+        color: white;
+        font-size: 40px;
+        transition: all 0.2s;
+    }
+    
+    #off{
+        display: block;
+        color: white;
+        font-size: 40px;
+        transition: all 0.2s;
+    
+    }
+    
+    #pdf {
+        width: 100vw;
+        top: 0%;
+        left: 0px;
+        position: fixed;
+        height: 40px;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #imgBox {
+        grid-row-end: span 2; /* Este elemento se extiende a través de dos filas */
+        grid-column-end: span 1; /* Este elemento se extiende a través de dos columnas */
+        display: flex;    }
+    
+    #imgBox img{
+        width: 200px;
+        height: auto;
+        margin: auto;
+        border: solid 4px black;
+        border-radius: 50%;
+                }
+    
+    #box {
+        position: absolute;
+        display: none;
+        background-color: white;
+        width: 81%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        padding: 10%;
+        margin: 9%;
+        margin-top: 8%;
+        height: 70%;
+        border: solid black;
+        z-index: 2;
+        top: 0px;
+        bottom: 0px;
+    }
+    
+    /* Dark mode */
+    
+    .mainD {
+        display: flex;
+        height: 100vh;
+        margin-left: 0px;
+        width: 100vw;
+        padding: 10%;
+        background-color:rgb(23, 23, 23)
+    }
+    #boxD {
+        position: absolute;
+        color: white;
+        display: none;
+        width: 81%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        padding: 10%;
+        margin: 9%;
+        margin-top: 8%;
+        height: 70%;
+        border: solid white;
+        z-index: 2;
+        top: 0px;
+        bottom: 0px;
+    }
+    
+
+    #pdfD {
+        width: 100vw;
+        left: 0px;
+        top: 0%;
+        position: fixed;
+        height: 40px;
+        background-color: white;
+        color: black;
+        margin: 0px;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 800;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #gridD {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .material-symbols-outlined.closeI {
+        display: none;
+        width: 100%;
+    }
+
+    #gridD div:not(#imgBox) {
+        display: flex;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid white;
+        transition: 0.2s;
+        color: white;
+        justify-content: center;
+    }
+    
+    #gridD div:not(#imgBox, #nameT):hover {
+        display: flex;
+        color: black;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 10%;
+        font-family: 'Zilla Slab', serif;
+        font-weight: 600;
+        border: solid black;
+        border-radius: 50px;
+        justify-content: center;
+    }
+    
+    
+    #nModeD {
+        position: fixed;
+        display: flex;
+        top: 0px;
+        right: 65px;
+        border: none;
+        
+    }
+    #nModeD span {
+        background-color: white;
+    
+    }
+    #sunD {
+        display: none;
+        color: black;
+        font-size: 30px;
+        font-weight: 400;
+        padding: 5px;
+    
+    }
+    #moonD {
+        display: block;
+        color: black;
+        font-size: 30px;
+        font-weight: 400;
+        padding: 5px;
+    }
+    
+    #onD {
+        display: block;
+        color: black;
+        font-size: 40px;
+    }
+    
+    #offD{
+        display: none;
+        color: white;
+        font-size: 40px;  
+    }
+} /* ////////////////////////////*/
+
